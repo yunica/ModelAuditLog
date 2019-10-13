@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<br/>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<table style="width:100%">
+    <tr>
+        <td>id</td>
+        <td>content_object</td>
+        <td>object_id</td>
+        <td>field</td>
+        <td>action</td>
+        <td>old_value</td>
+        <td>new_value</td>
+        <td>stamp</td>
+        <td>user_name</td>
+        <td>user_id</td>
+        <td>content_type</td>
+    </tr>
+    {% for i in aud %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.content_object }}</td>
+            <td>{{ i.object_id }}</td>
+            <td>{{ i.field }}</td>
+            <td>{{ i.action }}</td>
+            <td>{{ i.old_value }}</td>
+            <td>{{ i.new_value }}</td>
+            <td>{{ i.stamp }}</td>
+            <td>{{ i.user_name }}</td>
+            <td>{{ i.user_id }}</td>
+            <td>{{ i.content_type }}</td>
+        </tr>
+
+    {% endfor %}
+</table>
+</body>
+</html>
